@@ -134,13 +134,25 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="arduino-ide">Arduino IDE</h1>
-<h2 id="installation">Installation</h2>
+<h2 id="installing-the-arduino-ide-integreate-development-environment">Installing the Arduino IDE (Integreate Development Environment)</h2>
 <p>Install Arduino IDE <a href="https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing/">2.x</a>.</p>
-<p>Adafruit documentation for the Metro ESP32-S2 board but it uses Arduino IDE 1.x:</p>
+<p>On a <strong>Linux machine</strong>, the simplest option is to use the ZIP file. Simply download and uncompress the file.
+Then you can start the Arduino IDE by clicking on the <strong>arduino-ide</strong> file.</p>
+<p>WARNING: Adafruit documentation for the Metro ESP32-S2 board but it uses Arduino IDE 1.x:</p>
 <ul>
 <li><a href="https://learn.adafruit.com/adafruit-metro-esp32-s2/using-with-arduino-ide">https://learn.adafruit.com/adafruit-metro-esp32-s2/using-with-arduino-ide</a></li>
 <li><a href="https://learn.adafruit.com/adafruit-metro-esp32-s2/arduino-ide-setup-2">https://learn.adafruit.com/adafruit-metro-esp32-s2/arduino-ide-setup-2</a></li>
 </ul>
+<h2 id="setup-the-metro-esp32-s2-board-for-arduino">Setup the Metro ESP32-S2 Board for Arduino</h2>
+<p>You need to do the following only once the first time you want to upload a program to the Metro ESP32-S2 board.
+- First, plug the  board to your computer using a USB cable.
+- Then, make the the board enter the Drive Firmware Update (DFU) mode to update the ROM bootloader as explained in the <a href="https://learn.adafruit.com/adafruit-metro-esp32-s2/rom-bootloader">Adafruit tutotrial</a>. This means:
+    1. Press and <strong>hold</strong> the DFU / Boot0 button down. Don't let go of it yet!
+    2. Press and <strong>release</strong> the Reset button.
+    3. Release the DFU / Boot0 button
+- Select the board type and the port which should be <strong>/dev/ttypACM0</strong>
+- Upload the program
+- Press and <strong>release</strong> the Reset button if needed</p>
               
             </div>
           </div><footer>
