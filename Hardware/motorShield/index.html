@@ -137,6 +137,82 @@
 <p>A Motor Shield lets you drive two DC motors with your Arduino board, controlling the speed and direction of each one independently. You can also measure the motor current absorption of each motor, among other features.</p>
 <p>We use this <a href="https://store.arduino.cc/products/arduino-motor-shield-rev3">Arduino motor shield</a>.</p>
 <p><img alt="Arduino Motor Shield Rev3" src="../../img/motorShieldArduino.jpg" /></p>
+<h2 id="pin-mapping">Pin Mapping</h2>
+<p>Each motor is controlled by a set on pins that are garhtered into channels. There are 2 channels: A and B. Below their respective pins and how they map to the Adafruit Metro ESP32-S2 board.</p>
+<h3 id="motor-channel-a">Motor Channel A</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Role</th>
+<th style="text-align: center;">Metro ESP32-S2 Pin Number</th>
+<th style="text-align: center;">Comment</th>
+<th style="text-align: center;">Arduino Pin Number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Direction</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">HIGH = forward, LOW = backward</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr>
+<td style="text-align: center;">Break</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">HIGH = stop motor</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">Speed</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">Int between 0 and 255</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">Current</td>
+<td style="text-align: center;">A0</td>
+<td style="text-align: center;">Consumed current between 0 and 1023</td>
+<td style="text-align: center;">A0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motor-channel-b">Motor Channel B</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Role</th>
+<th style="text-align: center;">Metro ESP32-S2 Pin Number</th>
+<th style="text-align: center;">Comment</th>
+<th style="text-align: center;">Arduino Pin Number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Direction</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">HIGH = forward, LOW = backward</td>
+<td style="text-align: center;">13</td>
+</tr>
+<tr>
+<td style="text-align: center;">Break</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">HIGH = stop motor</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: center;">Speed</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">Int between 0 and 255</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr>
+<td style="text-align: center;">Current</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">Consumed current between 0 and 1023</td>
+<td style="text-align: center;">A1</td>
+</tr>
+</tbody>
+</table>
 <h2 id="specifications">Specifications</h2>
 <ul>
 <li>Operating Voltage: 5V to 12V</li>
